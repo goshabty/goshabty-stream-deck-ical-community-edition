@@ -60,7 +60,7 @@ export default class NextMeeting extends Action {
       clearInterval(this.marquee.interval)
       this.marquee.active = false
     } else {
-      this.marquee.interval = marquee(this, context, this.currentEvent.summary, 9)
+      this.marquee.interval = marquee(this, context, this.currentEvent.summary, 9, 4)
     }
 
     this.onDoublePress(() => {
