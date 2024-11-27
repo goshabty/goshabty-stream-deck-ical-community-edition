@@ -5,7 +5,7 @@
  */
 import Action from './action'
 import imageCache from '../lib/images.js'
-import { executeIfCacheAvailable, findActiveEvents, eventsSecondsAndNowDifference, sec2time } from '../lib/utils.js'
+import { executeIfCacheAvailable, findActiveEvents, findNextEvent, eventsSecondsAndNowDifference, sec2time, trimForMarquee } from '../lib/utils.js'
 
 export default class TimeLeft extends Action {
   constructor (uuid, streamDeck, context, settings) {
@@ -109,7 +109,12 @@ export default class TimeLeft extends Action {
         this.currentImage = 'timeLeft'
         this.setImage(context, imageCache.timeLeft)
       }
-      this.setTitle(context, 'No\nActive\nMeeting')
+      // IF SETTINGS.SHOW NEXT EVENT
+      if (this.nextEvent = findNextEvent()) {
+        this.setTitle(context, `Next:\n` + trimForMarquee(this.nextEvent.summary, 10, 0, 4).text)
+      } else {
+        this.setTitle(context, 'No\nActive\nMeeting')
+      }
       // Check again in 10 seconds if new events available
       this.timeOut = setTimeout(() => { this.startTimer(context) }, 10000, context)
     }
