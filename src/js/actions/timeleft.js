@@ -88,7 +88,7 @@ export default class TimeLeft extends Action {
             this.currentImage = 'timeLeftRed'
             this.setImage(context, imageCache.timeLeftRed)
           }
-          this.setTitle(context, `\n${sec2time(difference)}\n${this.activeMeetings > 1 ? `         ${this.currentMeeting + 1}/${this.activeMeetings}` : ''}`)
+          this.setTitle(context, `\n${sec2time(difference)}\n${this.activeMeetings > 1 ? `         ${this.currentMeeting + 1}/${this.activeMeetings}` : '\nremaining'}`)
         } else {
           if (this.currentImage !== 'timeLeft') {
             this.currentImage = 'timeLeft'
