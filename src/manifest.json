@@ -32,7 +32,7 @@
   "SDKVersion": 2,
   "Author": "Pedro Fuentes ft. MSCRMGuru, damirault", 
   "CodePath": "app.html", 
-  "Description": "Display information from your calendar using an iCal URL. Visual cues and a countdown will help you end meetings on time and be ready for the next one. \n\nThis version was built with several fixes and improvements from github community: \n- MSCRMGuru (recurring events fix, https://github.com/MSCRMGuru/stream-deck-ical), \n- damirault (UX improvements, https://github.com/damirault/stream-deck-ical). \n\nBuilt by Goshabty (telegram @George785)", 
+  "Description": "Display information from your calendar using an iCal URL. Visual cues and a countdown will help you end meetings on time and be ready for the next one. \n\nThis version was built with several fixes and improvements from github community: \n- MSCRMGuru (recurring events fix, https://github.com/MSCRMGuru/stream-deck-ical), \n- damirault (UX improvements, https://github.com/damirault/stream-deck-ical). \n\nBuilt by Goshabty (https://github.com/goshabty/goshabty-stream-deck-ical-community-edition)", 
   "Name": "iCal [Community Edition]", 
   "Icon": "assets/icalIcon", 
   "Category": "iCal",
