@@ -42,7 +42,7 @@ export function sec2time (timeInSeconds) {
   if (hours > 4) return `~${sign}${hours}h`
   if (hours > 0 && minutes === 0) return `${sign}${hours}h 0m`
   if (hours > 0) return `${sign}${hours}h ${minutes}m`
-  if (minutes > 0) return `${sign}${minutes}m ${seconds}s`
+  if (minutes > 0) return `${sign}${minutes}m`
 
   return `${sign}${seconds}s`
 }
